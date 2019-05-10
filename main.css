@@ -3,20 +3,38 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.topnav {
-  overflow: hidden;
+html {
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
+html, body, .hero {
+  height: 100%;
+  width: 100%;
+}
+.hero {
+  width: 100%;
+  min-height: 600px;
+  background-image: url(hero.png);
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+.topnav {
+  overflow: hidden;
+  z-index: 2;
+  padding-left: 42%;
+  position: absolute;
+}
 .topnav a {
   float: right;
   color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 1.4em;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: rgb(221, 221, 221);
   color: black;
 }
