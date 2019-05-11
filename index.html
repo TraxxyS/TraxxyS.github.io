@@ -9,9 +9,18 @@
     <meta charset="utf-8">
     <title>TastyNinjas</title>
     <link rel="stylesheet" href="main.css">
+    <!--Script-->
+    <script type="text/javascript">  
+
+      function ausblenden(id, sekunden) {  
+        setTimeout(function() {  
+          document.getElementById(id).style.display = "none";  
+        }, sekunden * 1000);  
+      }  
+      </script>
   </head>
-  <body>
-    <div class="lds-facebook"><div></div><div></div><div></div></div>
+  <body onload="ausblenden('load', 3.5)">
+    <div id="load"class="lds-facebook"><div></div><div></div><div></div></div>
     <header>
     <!--NAVBAR-->
     <nav class="topnav">
