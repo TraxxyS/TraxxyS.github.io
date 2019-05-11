@@ -64,7 +64,7 @@ body {
     background: #a8a8a8;
   }
 .container {
-    padding-top: 100px;
+    padding-top: 250px;
     float: left;
     position: absolute;
     z-index: 1;
@@ -134,4 +134,9 @@ body {
 .box:hover .content p {
     opacity: 1;
     transition-delay: 0.5s;
+}
+.current {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
 }
