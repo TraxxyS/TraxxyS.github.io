@@ -15,29 +15,32 @@ html, body{
 .hero {
   margin: 0px;
   width: 100%;
-  max-height: 700px;
+  height: 100%;
+  max-height: 2000px;
   display: flex;
   justify-content: center;
   background-color: #a8a8a8;
   position: absolute;
   z-index: 2;
-  box-shadow: 5px 1px 8px black;
 }
 #hero_image {
+  padding-top: 10%;
   margin: 0px;
   background-repeat: no-repeat;
   z-index: 1;
-  vertical-align: middle;
+  position: absolute;
+  display: flex;
+  justify-content: center;
 }
 .topnav {
+  background-color: #58585815;
   width: 100%;
-  margin-top: 15px;
   overflow: hidden;
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: ceneter;
-  z-index: 3;
+  z-index: 2;
 }
 .topnav a {
   float: right;
@@ -83,4 +86,38 @@ a:active::before {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
+}
+
+/*team.css*/
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: cenetr;
+  align-items: cenet;
+  min-height: 100vh;
+  background: #a8a8a8;
+}
+
+.container {
+  position: absolute;
+  z-index: 1;
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.box {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: #000;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.5);
+}
+.box .imgBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;;
 }
