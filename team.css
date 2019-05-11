@@ -5,7 +5,7 @@
     position: absolute;
     display: flex;
     justify-content: center;
-    align-items: ceneter;
+    align-items: center;
     z-index: 2;
   }
   .topnav a {
@@ -135,8 +135,19 @@ body {
     opacity: 1;
     transition-delay: 0.5s;
 }
+.heading {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
 .current {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 6%;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     position: absolute;
 }
