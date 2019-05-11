@@ -40,7 +40,7 @@ html, body{
   display: flex;
   justify-content: center;
   align-items: ceneter;
-  z-index: 2;
+  z-index: 3;
 }
 .topnav a {
   float: right;
@@ -86,38 +86,4 @@ a:active::before {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
-}
-
-/*team.css*/
-body {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: cenetr;
-  align-items: cenet;
-  min-height: 100vh;
-  background: #a8a8a8;
-}
-
-.container {
-  position: absolute;
-  z-index: 1;
-  width: 1000px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.box {
-  position: relative;
-  width: 300px;
-  height: 400px;
-  background: #000;
-  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.5);
-}
-.box .imgBox {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;;
 }
