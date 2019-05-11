@@ -128,7 +128,7 @@ body {
     padding: 0;
     opacity: 0;
     line-height: 1.2em;
-    transition: 0.5s;
+    transition: 0.2s;
     text-align: justify;
 }
 .box:hover .content p {
