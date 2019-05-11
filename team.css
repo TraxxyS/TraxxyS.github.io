@@ -128,12 +128,12 @@ body {
     padding: 0;
     opacity: 0;
     line-height: 1.2em;
-    transition: 05s;
+    transition: 0.5s;
     text-align: justify;
 }
 .box:hover .content p {
     opacity: 1;
-    transition-delay: 0.5s;
+    transition-delay: 0.2s;
 }
 .heading {
     position: absolute;
