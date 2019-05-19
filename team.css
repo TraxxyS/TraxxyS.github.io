@@ -1,58 +1,77 @@
-.topnav {
-    background-color: #58585815;
-    width: 100%;
-    overflow: hidden;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-  }
-  .topnav a {
-    float: right;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 1.4em;
-    font-family: 'Roboto Condensed', sans-serif;
-  }
-  a:link,
-  a:visited {
-    position: relative;
-    color: black;
-    font-variant: small-caps;
-    text-decoration: none;
-  }
+@-webkit-keyframes fadeIn { from { opacity:0.2; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0.2; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0.2; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;  /* make things invisible upon start */
+  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
   
-  a:hover,
-  a:active {
-    color: transparent;
-    background-color: transparent;
-    text-shadow: -.25px -.25px 0 black, -.25px .25px 0 black, .25px -.25px 0 black, .25px .25px 0 black;
-  }
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
   
-  a::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #8e0108;
-    visibility: hidden;
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transition: all .3s ease-in-out 0s;
-    transition: all .3s ease-in-out 0s;
-  }
-  
-  a:hover::before,
-  a:active::before {
-    visibility: visible;
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
-  }
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+ }
+
+ .topnav {
+  background-color: #58585815;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: ceneter;
+  z-index: 3;
+}
+.topnav a {
+  float: right;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1.4em;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+a:link,
+a:visited {
+  position: relative;
+  color: black;
+  font-variant: small-caps;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  color: transparent;
+  background-color: transparent;
+  text-shadow: -.25px -.25px 0 black, -.25px .25px 0 black, .25px -.25px 0 black, .25px .25px 0 black;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #8e0108;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all .3s ease-in-out 0s;
+  transition: all .3s ease-in-out 0s;
+}
+
+a:hover::before,
+a:active::before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
