@@ -179,5 +179,7 @@ nav {
     .cta {
         padding: 10px 0px 0px 0px;
     }
-
+    .small-circle {
+        opacity: 0;
+    }
 }
