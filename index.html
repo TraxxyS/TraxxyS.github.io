@@ -1,38 +1,56 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <!--Responsive-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Fontstyles-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta charset="utf-8">
-    <title>TastyNinjas</title>
-    <link rel="stylesheet" href="main.css">
-    <!--Script-->
-    <script type="text/javascript">  
-      function ausblenden(id, sekunden) {  
-        setTimeout(function() {  
-          document.getElementById(id).style.display = "none";  
-        }, sekunden * 1000);  
-      }  
-      </script>
-  </head>
-  <body onload="ausblenden('load', 3.5)">
-    <div id="load"class="lds-facebook fade-in"><div></div><div></div><div></div></div>
-    <header>
-    <!--NAVBAR-->
-    <nav class="topnav fade-in">
-      <a href="">Home</a>
-      <a href="News.html">News</a>
-      <a href="team.html">Team</a>
-      <a href="About.html">About</a>
-    </nav>
-    <!--Header-->
-    <div class="hero fade-in">
-      <img id="hero_image" src="hero.png" width="700" height="700">
-    </div>
+<html>
 
-  </header> 
-  </body>
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img class="logo" src="hero.png" alt="">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a class="nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link" href="team.html">Team</a></li>
+                <li><a class="nav-link" href="kontakt.html">Kontakt</a></li>
+            </ul>
+
+        </nav>
+        <div class="cart">
+
+        </div>
+    </header>
+    <main>
+        <section class="presentation">
+            <div class="introduction">
+                <div class="intro-text">
+                    <h1>TastyNinjas</h1>
+                    <p>
+                        A CounterStrike Globale Offensive team which was founded in the beginning of 2019
+
+                    </p>
+                </div>
+                <div class="cta">
+                    <button class="cta-steamgroup"
+                        onclick="window.location.href ='https://steamcommunity.com/groups/tastyninjasesport'; ">Steamgroup</button>
+                    <button class="cta-99damage"
+                        onclick="window.location.href = 'https://csgo.99damage.de/de/leagues/teams/44271-tastyninjas';">99Damage</button>
+                </div>
+            </div>
+            <div class="cover">
+                <img src="./hero.png" alt="Logo">
+            </div>
+
+
+
+            <img class="big-circle" src="./img/big-eclipse.svg" alt="">
+            <img class="mid-circle" src="./img/mid-eclipse.svg" alt="">
+            <img class="small-circle" src="./img/small-eclipse.svg" alt="">
+
+    </main>
+</body>
+
 </html>

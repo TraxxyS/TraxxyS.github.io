@@ -1,202 +1,141 @@
-@-webkit-keyframes fadeIn { from { opacity:0.2; } to { opacity:1; } }
-@-moz-keyframes fadeIn { from { opacity:0.2; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0.2; } to { opacity:1; } }
-
-.fade-in {
-  opacity:0;  /* make things invisible upon start */
-  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-  -moz-animation:fadeIn ease-in 1;
-  animation:fadeIn ease-in 1;
-  
-  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-  -moz-animation-fill-mode:forwards;
-  animation-fill-mode:forwards;
-  
-  -webkit-animation-duration:1s;
-  -moz-animation-duration:1s;
-  animation-duration:1s;
- }
-  /*Navigation*/
- .topnav {
-  background-color: #58585815;
-  width: 100%;
-  overflow: hidden;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: ceneter;
-  z-index: 3;
-}
-.topnav a {
-  float: right;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 1.4em;
-  font-family: 'Roboto Condensed', sans-serif;
-}
-a:link,
-a:visited {
-  position: relative;
-  color: black;
-  font-variant: small-caps;
-  text-decoration: none;
-}
-
-a:hover,
-a:active {
-  color: transparent;
-  background-color: transparent;
-  text-shadow: -.25px -.25px 0 black, -.25px .25px 0 black, .25px -.25px 0 black, .25px .25px 0 black;
-}
-
-a::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #8e0108;
-  visibility: hidden;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transition: all .3s ease-in-out 0s;
-  transition: all .3s ease-in-out 0s;
-}
-
-a:hover::before,
-a:active::before {
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
-}
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: cenetr;
-    align-items: ceneter;
-    min-height: 100vh;
-    background: #a8a8a8;
-  }
-  /*Info cards*/
-.container {
-    padding-top: 250px;
-    float: left;
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-.box {
-    position: relative;
-    width: 300px;
-    height: 400px;
-    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.5);
-  }
-.box .imgBox {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;;
-}
-.box .imgBox img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 0.5s;
-  }
-.box:hover .imgBox img {
-    opacity: 0;
-}
-.box .content {
-    position: absolute;
-    bottom: 20px;
-    left: 10px;
-    width: 80%;
-    height: 60px;
-    background: #fff;
-    transition: 0.5s;
-    overflow: hidden;
-
-    padding: 15px;
+* {
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
-.box:hover .content {
-    width: 100%;
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+
+    display: flex;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+}
+.logo {
+    height: 100px;
+    width: 100px;
+}
+
+.logo-container,.nav-links,.cart {
+    display: flex;
+}
+
+.logo-container {
+
     height: 100%;
-    bottom: 0;
-    left: 0;
+    flex: 1;
 }
-.box .content h3 {
-    margin: 0;
-    padding: 0;
-    font-size: 20px;
+.cart{
+    flex: 1;
 }
-.box .content p {
-    margin: 10px 0 0;
-    padding: 0;
-    opacity: 0;
-    line-height: 1.2em;
-    transition: 0.1s;
-    text-align: justify;
+nav {
+    flex: 2;
 }
-.box:hover .content p {
-    opacity: 1;
-    transition-delay: 0.2s;
+
+.nav-links {
+    justify-content: space-around;
+    list-style: none;
 }
-.heading {
+
+.nav-link {
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #5f5f79;
+    font-size: 18px;
+    text-decoration: none;
+}
+.nav-link:hover {
+    color: #32323f;
+}
+
+.middle {
     position: absolute;
+    top: 15%;
+    left: 0%;
+}
+.middle2 {
+    position: absolute;
+    top: 15%;
+    left: 20%;
+}
+.middle3 {
+    position: absolute;
+    top: 15%;
+    left: 40%;
+}
+.middle4 {
+    position: absolute;
+    top: 15%;
+    left: 60%;
+}
+.middle5 {
+    position: absolute;
+    top: 15%;
+    left: 80%;
+}
+.card {
+    cursor: pointer;
+    width: 340px;
+    height: 480px;
+}
+.front,.back {
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: transform 0.6s linear;
+}
+.front img {
+    height: 70%;
+    align-items: center;
+    border-radius: 50%;
+}
+.card-hero {
+    height: 90px;
+}
+.front {
+    background: #f1f1f1;
+    transform: perspective(600px) rotateY(0deg);
+}
+.back {
+    background: #f1f1f1;
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.back-content {
+    color: #2c3e50;
+    text-align: center;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    
 }
-.heading_ {
-  position: absolute;
-  width: 100%;
-  display: flex;
-  justify-content: center;
+.sm{
+    margin:20px 0;
 }
-.current {
-    padding-top: 6%;
-    text-transform: uppercase;
-    display: flex;
+.sm a {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
     justify-content: center;
     align-items: center;
-    font-family: 'Russo One', sans-serif;
-    position: absolute;
+    color: #2c3e50;
+    font-size: 18px;
+    transition: 0.4s;
+    border-radius: 50%;
 }
-.text {
-    padding: 670px;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Russo One', sans-serif;
-    position: absolute;
+.sm a:hover {
+    background:#2c3e50;
+    color: white;
 }
-.Substitute2 {
-    position: absolute;
-    margin: 50px;
-    top: 120%;
-    left: 50%;
-    margin-left: -150px;
+.card:hover > .front {
+    transform: perspective(600px) rotateY(-180deg);
+
 }
-.Substitute1 {
-  position: absolute;
-  margin: 50px;
-  top: 120%;
-  left: 29%;
-  margin-left: -150px;
+.card:hover > .back {
+    transform: perspective(600px) rotateY(0deg);
 }
+
